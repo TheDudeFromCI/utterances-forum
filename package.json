@@ -1,8 +1,8 @@
 {
-  "name": "utterances",
+  "name": "utterances-forum",
   "version": "1.0.0",
-  "description": "A lightweight comments widget built on GitHub issues.",
-  "private": true,
+  "description": "A modified version of utterance which acts more like a forum.",
+  "private": false,
   "license": "MIT",
   "keywords": [
     "github",
@@ -11,17 +11,16 @@
     "blog"
   ],
   "homepage": "https://utteranc.es",
-  "bugs": "https://github.com/utterance/utterances/issues",
+  "bugs": "https://github.com/TheDudeFromCI/utterances-forum/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/utterance/utterances.git"
+    "url": "https://github.com/TheDudeFromCI/utterances-forum.git"
   },
   "scripts": {
     "start": "parcel serve src/*.html src/client.ts src/stylesheets/themes/*/{index,utterances}.scss --no-hmr --port 4000",
     "build": "parcel build src/*.html src/client.ts src/stylesheets/themes/*/{index,utterances}.scss --experimental-scope-hoisting",
     "lint": "tslint --project tsconfig.json",
-    "predeploy": "yarn run build && touch dist/.nojekyll && echo 'utteranc.es' > dist/CNAME",
-    "deploy": "gh-pages --dist dist"
+    "predeploy": "yarn run build && touch dist/.nojekyll,
   },
   "devDependencies": {
     "@primer/css": "^14.2.0",
